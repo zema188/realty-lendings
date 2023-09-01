@@ -1,0 +1,212 @@
+.header-w {
+      z-index: 2;
+      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: .2s;
+      @media (max-width: 539px) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+      }
+      & .white {
+            display: none;
+      }
+      &.sticky {
+            background: #092333;
+            & .header__logo {
+                  & .white {
+                        display: block;
+                  }
+                  & .colors {
+                        display: none;
+                  }
+            }
+      }
+}
+.header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      &__info {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+
+      }
+
+      &__logo {
+            & img {
+                  width: 200px;
+                  @media (max-width: 539px) {
+                        width: 150px;
+                  }
+            }
+      }
+
+      &__nav {
+            @media (max-width: 1023px) {
+                  display: none;
+            }
+      }
+
+      &__nav-item {
+            font-size: 15px;
+            font-weight: 400;
+            transition: .2s;
+            text-decoration: underline transparent;
+            &:hover {
+                  text-decoration: underline;
+            }
+      }
+
+      &__action {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+      }
+
+      &__phone {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 700;
+            & img {
+                  width: 20px;
+                  height: 20px;
+                  @media (max-width: 1023px) {
+                        width: 24px;
+                        height: 24px;
+                  }
+            }
+            & span {
+                  @media (max-width: 1199px) {
+                        display: none;
+                  }
+            }
+      }
+
+      &__application-btn {
+            @media (max-width: 1023px) {
+                  display: none;
+            }
+      }
+}
+.container {
+}
+.nav {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+}
+
+
+
+.nav-icon {
+      width: 30px;
+      height: 24px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+    .nav-icon span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    
+    .nav-icon span:nth-child(1) {
+      top: 0px;
+    }
+    .nav-icon span:nth-child(2) {
+      top: 10.5px;
+    }
+    .nav-icon span:nth-child(3) {
+      top: 20px;
+    }
+    .nav-icon.open span {
+      left: 7px;
+    }
+    .nav-icon.open span:nth-child(1) {
+      top: 9px;
+      transform: rotate(135deg);
+      max-width: 30px;
+      left: 0px;
+    }
+    .nav-icon.open span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+    .nav-icon.open span:nth-child(3) {
+      top: 9px;
+      transform: rotate(-135deg);
+      max-width: 30px;
+      left: 0px;
+    }
+    .header__menu {
+      display: none;
+      @media (max-width: 1023px) {
+        display: block;
+      }
+    }
+
+.header-m {
+      background: #35739d;
+      max-width: 290px;
+      width: 63%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      left: -100%;
+      transition: .4s;
+      padding: 37px 15px 0px;
+      height: 100vh;
+      overflow: auto;
+      &.active {
+            left: 0;
+      }
+      &__content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding-bottom: 100px;
+      }
+      &__nav {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+      }
+      &__nav-item {
+            padding: 7px 0px;
+      }
+      & .header__auth {
+            display: flex;
+            justify-content: center;
+            & a {
+                  font-size: 15px;
+            }
+            margin-bottom: 20px;
+      }
+}
+.header-m__close {
+      position: absolute;
+      right: 10px;
+      top: 19px;
+      & path {
+            stroke: #fff;
+      }
+}

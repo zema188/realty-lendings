@@ -1,0 +1,14 @@
+.map {
+    height: 587px;
+    padding-top: 80px;
+    @media (max-width: 899px) {
+        padding-top: 50px;
+    }
+    @media (max-width: 539px) {
+        padding-top: 30px;
+    }
+    & iframe {
+        height: 100%;
+        width: 100%;
+    }
+}

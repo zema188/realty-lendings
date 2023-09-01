@@ -1,0 +1,106 @@
+.conditions {
+    padding-top: 80px;
+    @media (max-width: 899px) {
+        padding-top: 50px;
+    }
+    @media (max-width: 539px) {
+        padding-top: 30px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        @media (max-width: 539px) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 40px;
+        @media (max-width: 1023px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 539px) {
+            gap: 20px;
+        }
+    }
+
+    &__list-item {
+        background: #f6f6f6;
+        padding: 43px 164px 43px 41px;
+        flex: 0 0 calc(50% - 20px);
+        position: relative;
+        @media (max-width: 1023px) {
+            flex: 0 0 100%;
+        }
+        @media (max-width: 767px) {
+            padding: 20px 100px 45px 20px;
+        }
+        @media (max-width: 539px) {
+            padding: 15px 45px 45px 15px;
+        }
+        & p, ul {
+            line-height: 25px;
+            font-weight: 300;
+            color: #000000;
+            @media (max-width: 539px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    &__item-subtitle {
+        color: #000000;
+        font-size: 18px;
+        margin-bottom: 15px;
+        @media (max-width: 539px) {
+            font-size: 16px;
+        }
+    }
+
+    &__item-btn {
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 15.5px 16px;
+    }
+
+    &__item-btn-more {
+        background: #fff;
+        color: #a2a2a2;
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: 1px solid #a2a2a2;
+        font-weight: 400;
+        margin-top: 28px;
+        width: fit-content;
+    }
+
+    &__item-info {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__item-number {
+        position: absolute;
+        font-size: 400px;
+        line-height: 287px;
+        bottom: 0;
+        right: 50px;
+        font-weight: 500;
+        @media (max-width: 1023px) {
+            right: 110px;
+        }
+        @media (max-width: 767px) {
+            right: 0px;
+        }
+        @media (max-width: 539px) {
+            font-size: 200px;
+            line-height: 140px;
+        }
+    }
+}
