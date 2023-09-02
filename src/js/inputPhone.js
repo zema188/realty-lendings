@@ -5,6 +5,7 @@
     phoneInputs.forEach(function(phoneInput) {
       const container = document.querySelector('.phone-input-container.toClone')
       const cloneContainer = container.cloneNode(true);
+      cloneContainer.classList.remove('toClone')
       phoneInput.replaceWith(cloneContainer);
 
       cloneContainer.addEventListener('click', function(e) {

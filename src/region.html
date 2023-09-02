@@ -24,20 +24,20 @@
 							Регион, в котором море, солнце, история и природа соединяются в гармонии. Древние города, море, солнце, пляж, лес - компоненты одного прекрасного целого. Мустафа Кемаль Ататюрк описывает Анталью фразой: «Несомненно, Анталья - самое красивое место в мире».
 						</p>
 					</div>
-					<div class="preview__form">
+					<form class="preview__form form">
 						<div class="preview__form-title">
 							Оставить заявку эксперту
 						</div>
 						<input placeholder="Имя">
-						<input placeholder="Номер телефона">
-						<button class="preview__form-submit-btn btn btn_blue btn_arrow">
+						<input data-phone-pattern="+7 (___) ___-__-__" class="validation-phone">
+						<button class="preview__form-submit-btn btn btn_blue btn_arrow" type="submit">
 							Оставить заявку
 							<img src="./img/icons/right-arrows.png" alt="стрелочка">
 						</button>
 						<p class="preview__form-agreement">
 							Нажимая на кнопку, вы принимаете Согласие на обработку персональных данных
 						</p>
-					</div>
+					</form>
 				</div>
 				<div class="preview__info container">
 					<div class="preview__info-item">
@@ -575,6 +575,10 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bodyScrollLock.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="js/allCountries-list.js"></script>
+	<script src="js/libphonenumber-validator.js"></script>
+	<script src="js/inputPhone.js"></script>
 	<script src="js/app.js"></script>
 
 </body>
